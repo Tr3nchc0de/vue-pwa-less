@@ -13,6 +13,20 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  data: () => ({
+    nginx_version: "foobar",
+  }),
+  created: function() {
+  let vm = this
+    fetch('https://kulturportal.de/de_DE/blog_articles.json').then((response) => {
+      return response.json().then((json) => {
+        console.log("JSON", json)
+        vm.data = json
+      })
+    })
   }
 }
+
+
 </script>
