@@ -19,7 +19,7 @@ export default {
   }),
   created: function() {
   let vm = this
-    fetch('https://kulturportal.de/de_DE/blog_articles.json').then((response) => {
+    fetch('https://cb1.kulturportal.de/de_DE/blog_articles.json').then((response) => {
       return response.json().then((json) => {
         console.log("JSON", json)
         vm.data = json
