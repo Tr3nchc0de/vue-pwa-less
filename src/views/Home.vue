@@ -19,7 +19,7 @@ export default {
   }),
   created: function() {
   let vm = this
-    fetch('https://cb1.kulturportal.de/de_DE/blog_articles.json').then((response) => {
+    fetch('https://video03.culturebase.org/rec/ajax.php?m=all_ts&app_id=live%3Adsh2020&_=1613831510940').then((response) => {
       return response.json().then((json) => {
         console.log("JSON", json)
         vm.data = json
